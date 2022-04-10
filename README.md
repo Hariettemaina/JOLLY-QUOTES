@@ -1,7 +1,8 @@
-AUTHOR
-###### HARIETTE MAINA
-APP NAME
-# JOLLYQUOTES
+## JOLLYQUOTES
+## AUTHOR
+# HARIETTE MAINA
+
+
 ## Description
 
 This is agular cli application that displays quotes, allow the user to input new quote, upvote , downvote and delete the quote.
@@ -42,4 +43,5 @@ highlight directive property does not work properly
 ## Contact Information.
 hariettemaina@gmail.com
 ## License
-MIT License
+MIT License:
+Copyright(c)2022 Hariette Maina
