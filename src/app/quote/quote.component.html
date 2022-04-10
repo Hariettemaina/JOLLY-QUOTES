@@ -21,7 +21,7 @@
                 </div>
                  <div class="card-body" *ngIf="highlightHighest() != quote.upVote || quote.upVote == 0">
                     <blockquote class="blockquote mb-0 card-body">
-                        <p>{{quote.quote}}</p>
+                        
                         <footer class="blockquote-footer">
                             <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
                             <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </small>
