@@ -10,9 +10,39 @@
             <div class="cards">
                 <div class="card" *ngFor="let quote of quote; let i=index">
                     <div class="card-body" appHighlightQuote *ngIf="highlightHighest() == quote.upVote && quote.upVote > 0"></div>
-                    {{quote.quote}}
+                    <blockquote class="blockquote mb-0 card-body">
+                        <p>{{quote.quote}}</p>
+
+                        <footer class="blockquote-footer">
+                            <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
+                            <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </small>
+                        </footer>
+                    </blockquote>
+                </div>
+                <div class="card-body" *ngIf="highlightHighest() != quote.upVote || quote.upVote == 0">
+                    <blockquote class="blockquote mb-0 card-body">
+                        <p>{{quote.quote}}</p>
+                        <footer class="blockquote-footer">
+                            <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
+                            <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </small>
+                        </footer>
+                        
+                    </blockquote>
+                    <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (deleteQuote) ='deletingQuote($event,i)'></app-quote-details>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+        <h5 class="text-center" >GET TO INSPIRE SOMEONE TODAY!</h5>
+    </div>
+    <hr style="width:50%">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <app-quotes-form (addQuotes)="addNewQuote($event)"></app-quotes-form>
+        </div>
+        <div class="col-sm-2"></div>
+
     </div>
 </div>
