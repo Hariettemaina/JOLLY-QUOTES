@@ -15,7 +15,16 @@ export class QuoteComponent implements OnInit {
         new Quote('The way to get started is to quit talking and begin doing','Walt Disney','Harry Thunder',new Date(2020,5,9),9,2),
         new Quote('Life is what happens when you are making other plans','John Lennon', 'George Whither',new Date(2020,6,12),1,0),
       ] 
-     
+     //function for adding new quote
+     addNewQuote(quote){
+
+       this.quote.push(quote)
+     }
+
+     //function for toggling small text
+     toggleDetails(index){
+       this.quote[index].showDetails = !this.quote[index].showDetails
+     }
       
   constructor() { }
 
