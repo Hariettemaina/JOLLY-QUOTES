@@ -36,6 +36,20 @@ export class QuoteComponent implements OnInit {
          }
        }
      }
+
+
+     highlightHighest (){
+       let quoteUpvote = []
+       let highestUpVote: number
+       for (let j = 0; j < this.quote.length; j++){
+         quoteUpvote.push(this.quote[j].upVote)
+       }
+       quoteUpvote.sort(function (a, b){
+         return b - a
+       })
+       highestUpVote =quoteUpvote[0]
+       return highestUpVote;
+     }
       
   constructor() { }
 
