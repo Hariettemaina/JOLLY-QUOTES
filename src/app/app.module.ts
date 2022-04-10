@@ -18,7 +18,8 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
