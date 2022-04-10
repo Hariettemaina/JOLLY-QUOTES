@@ -6,15 +6,15 @@ import { Quote } from '../quote';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  newQuotes = new Quote ("","","",new Date(),0,0);
+  newQuote = new Quote ("","","",new Date(),0,0);
   @Output() addQuote = new EventEmitter < Quote > ();
 
 
   // function that creates a new quote array
   submittingQuote(){
 
-    this.addQuote.emit(this.newQuotes);
-    this.newQuotes = new Quote("","","",new Date(),0,0)
+    this.addQuote.emit(this.newQuote);
+    this.newQuote = new Quote("","","",new Date(),0,0)
 }
   constructor() { }
 
