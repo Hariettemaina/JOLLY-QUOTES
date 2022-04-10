@@ -5,10 +5,10 @@
         <p class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:13px;"> BELIEVE IN YOURSELF , LISTEN TO YOUR GUT AND DO WHAT YOU LOVE!</p>
 
     </div>
-    <div class="row" *ngFor="let quote of quote; let i=index">
-        <div class="col-sm-12">
-            <div class="cards">
-                <div class="card" >
+    <div class="row">
+        <div class="col-sm">
+            <div class="cards" *ngFor="let quote of quote; let i=index">
+                <div class="card">
                     <div class="card-body" appHighlightQuote *ngIf="highlightHighest() == quote.upVote && quote.upVote > 0"></div>
                     <blockquote class="blockquote mb-0 card-body">
                         <p>{{quote.quote}}</p>
@@ -19,11 +19,12 @@
                         </footer>
                     </blockquote>
                 </div>
+                
                  <div class="card-body" *ngIf="highlightHighest() != quote.upVote || quote.upVote == 0">
                     <blockquote class="blockquote mb-0 card-body">
                         <footer class="blockquote-footer">
                             <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
-                            <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </small>
+                            <h5 style= "font-size:1rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </h5>
                         </footer>
                         
                     </blockquote>
