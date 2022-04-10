@@ -19,7 +19,7 @@
                         </footer>
                     </blockquote>
                 </div>
-                <div class="card-body" *ngIf="highlightHighest() != quote.upVote || quote.upVote == 0">
+                 <div class="card-body" *ngIf="highlightHighest() != quote.upVote || quote.upVote == 0">
                     <blockquote class="blockquote mb-0 card-body">
                         <p>{{quote.quote}}</p>
                         <footer class="blockquote-footer">
@@ -31,7 +31,7 @@
                     <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (deleteQuote) ='deletingQuote($event,i)'></app-quote-details>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
     <div>
         <h5 class="text-center" >GET TO INSPIRE SOMEONE TODAY!</h5>
@@ -40,7 +40,7 @@
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
-            <app-quote (addQuote)="addNewQuote($event)"></app-quote>
+            <app-form (addQuote)="addNewQuote($event)"></app-form>
         </div>
         <div class="col-sm-2"></div>
 
