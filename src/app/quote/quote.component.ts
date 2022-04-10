@@ -23,7 +23,18 @@ export class QuoteComponent implements OnInit {
 
      //function for toggling small text
      toggleDetails(index){
-       this.quote[index].showDetails = !this.quote[index].showDetails
+       this.quote[index].showDetails = !this.quote[index].showDetails;
+     }
+
+     //function for deleting quote
+     deletingQuote(deleteQuote, index){
+       if(deleteQuote){
+         let toDelete = confirm ('Are you sure you want to delete this quote?')
+
+         if(toDelete){
+           this.quote.splice(index, 1)
+         }
+       }
      }
       
   constructor() { }
