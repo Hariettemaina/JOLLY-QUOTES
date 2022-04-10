@@ -6,10 +6,13 @@ import { Quote } from '../quote';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-  @Input() quote:Quote;
-
+  @Input() quote!: Quote;
 
   @Output() deleteQuote = new EventEmitter<boolean>();
+
+  
+  
+  
 
   quoteDelete(deleteyes:boolean){
     this.deleteQuote.emit(deleteyes);
@@ -20,13 +23,13 @@ export class QuoteDetailsComponent implements OnInit {
    //function that increments upvotes
 
    upVote(){
-    this.quote.upVote++;
+    this.quote.upVote++; 
 }
 
 //function that increments downvotes
 
-downVote(){
-    this.quote.downVote++;
+downVote() {
+  this.quote.downVote++;
 }
 
   ngOnInit(): void {

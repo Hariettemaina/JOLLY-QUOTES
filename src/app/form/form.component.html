@@ -3,9 +3,8 @@
         <blockquote class="blockquote mb-0 card-body">
             <form (ngSubmit)="submittingQuote() ; quoteForm.resetForm({})" #quoteForm="ngForm">
                 <div class="form-group">
-
                     <label for="quote">Enter Your Quote:</label>
-                    <textarea class="form-control" id="quote" rows="4" name="quote" placeholder="Your Quote..."
+                    <textarea class="form-control" id="quote" rows="5" name="quote" placeholder="Your Quote..."
                         #quote="ngModel" [(ngModel)]="newQuote.quote" required></textarea>
                     <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
                         A quote is required
