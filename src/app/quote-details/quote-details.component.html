@@ -3,14 +3,14 @@
         Submitted by {{quote.name}} on {{quote.submissionDate|date}} <b style="color: rgb(54, 3, 27);">({{quote.submissionDate|timeQuote}} day(s) ago)</b>.
     </small>
     <button class="btn" style="color:red;" (click)="quoteDelete(true)">
-        <i class="fas fa-trash-alt"></i>
+        <i class="bi bi-trash3-fill"></i>
         Delete
     </button>
     <button class="btn" (click)="downVote()"> dislike{{quote.downVote}}
-        <i class="fa-solid fa-thumbs-down" ></i>
+        <i class="bi bi-hand-thumbs-down-fill"></i>
     </button>
     <button class="btn" (click)="upVote()"> like {{quote.upVote}}
-        <i class="fa-solid fa-thumbs-up"></i>
+        <i class="bi bi-hand-thumbs-up-fill"></i>
     </button>
     
 </div>

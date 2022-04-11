@@ -55,7 +55,14 @@ export class QuoteComponent implements OnInit {
       return highestUpVote;
     }
  
-      
+      // //highlightHighest (){ 
+      //   //let quote Upvote = [] 
+      //   let highest UpVote: number 
+      //   for (let j = 0; j < this.quote.length; j++)
+      //   { quote Upvote.push(this.quote[j].upVote) 
+      //   } quote Upvote.sort(function (a, b){ return b - a })
+      //    highest UpVote =quote Upvote[0] 
+      //    //return highestUpVote; }
   
 
   ngOnInit(): void {

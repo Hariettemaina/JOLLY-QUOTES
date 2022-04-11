@@ -11,6 +11,7 @@ import { TimeQuotePipe } from './time-quote.pipe';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
