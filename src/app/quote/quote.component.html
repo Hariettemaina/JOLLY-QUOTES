@@ -15,7 +15,7 @@
                         <p>{{quote.quote}}</p>
 
                         <footer class="blockquote-footer">
-                            <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
+                             <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite> 
                             <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b
                                     style="color:rgb(90, 11, 74)">See more</b> </small>
                         </footer>
@@ -25,9 +25,8 @@
                 <div class="card-body" *ngIf="highlightHighest() != quote.upVote || quote.upVote == 0">
                     <blockquote class="blockquote mb-0 card-body">
                         <footer class="blockquote-footer">
-                            <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
-                            <h5 style="font-size:1rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">
-                                    </b> </h5>
+                            <!-- <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite> -->
+                            <h5 style="font-size:1rem;" (click)="toggleDetails(i);"></h5>
                         </footer>
 
                     </blockquote>
