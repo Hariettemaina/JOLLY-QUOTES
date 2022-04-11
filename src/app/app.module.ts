@@ -10,6 +10,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { TimeQuotePipe } from './time-quote.pipe';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

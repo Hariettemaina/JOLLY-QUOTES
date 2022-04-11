@@ -1,48 +1,52 @@
-<div class="container-fluid" >
+<div class="container-fluid">
     <div class="header">
         <h1 class="text-center">WELCOME TO JOLLY QUOTES</h1>
-        <br>
+        <hr>
         <p class="text-center" style="font-size:13px;">GET TO INSPIRE SOMEONE TODAY!</p>
-
     </div>
+    
     <div class="row">
         <div class="col-sm">
             <div class="cards" *ngFor="let quote of quote; let i=index">
                 <div class="card">
-                    <div class="card-body" appHighlightQuote *ngIf="highlightHighest() == quote.upVote && quote.upVote > 0"></div>
+                    <div class="card-body" appHighlightQuote
+                        *ngIf="highlightHighest() == quote.upVote && quote.upVote > 0"></div>
                     <blockquote class="blockquote mb-0 card-body">
                         <p>{{quote.quote}}</p>
 
                         <footer class="blockquote-footer">
                             <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
-                            <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </small>
+                            <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b
+                                    style="color:rgb(90, 11, 74)">See more</b> </small>
                         </footer>
                     </blockquote>
                 </div>
-                
-                 <div class="card-body" *ngIf="highlightHighest() != quote.upVote || quote.upVote == 0">
+
+                <div class="card-body" *ngIf="highlightHighest() != quote.upVote || quote.upVote == 0">
                     <blockquote class="blockquote mb-0 card-body">
                         <footer class="blockquote-footer">
                             <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
-                            <h5 style= "font-size:1rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </h5>
+                            <h5 style="font-size:1rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">
+                                    </b> </h5>
                         </footer>
-                        
+
                     </blockquote>
-                    <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (deleteQuote) ='deletingQuote($event,i)'></app-quote-details>
-                </div>   
+                    <app-quote-details *ngIf="quote.showDetails" [quote]="quote"
+                        (deleteQuote)='deletingQuote($event,i)'></app-quote-details>
+                </div>
             </div>
-        </div> 
+        </div>
     </div>
     <div>
-        <h5 class="text-center" >GET TO INSPIRE SOMEONE TODAY!</h5>
+        <h5 class="text-center">INSPIRE SOMEONE TODAY!</h5>
     </div>
-    <hr style="width:50%">
-    <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
-            <app-form (addQuote)="addNewQuote($event)"></app-form>
-        </div>
-        <div class="col-sm-2"></div>
+    <div>
+        <app-form (addQuote)="addNewQuote($event)"></app-form>
+    </div>
+    
+                
+    
 
-    </div>
+
+
 </div>

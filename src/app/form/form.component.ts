@@ -12,9 +12,8 @@ export class FormComponent implements OnInit {
 
   // function that creates a new quote array
   submittingQuote(){
-
     this.addQuote.emit(this.newQuote);
-    this.newQuote = new Quote("","","",new Date(),0,0)
+    
 }
   constructor() { }
 

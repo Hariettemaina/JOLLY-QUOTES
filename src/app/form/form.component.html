@@ -4,8 +4,8 @@
             <form (ngSubmit)="submittingQuote() ; quoteForm.resetForm({})" #quoteForm="ngForm">
                 <div class="form-group">
                     <label for="quote">Enter Your Quote:</label>
-                    <textarea class="form-control" id="quote" rows="5" name="quote" placeholder="Your Quote..."
-                        #quote="ngModel" [(ngModel)]="newQuote.quote" required></textarea>
+                    <input class="form-control" type="text" id="quote" rows="5" name="quote" placeholder="Your Quote..."
+                        [(ngModel)]="newQuote.quote" #quote="ngModel" required/>
                     <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
                         A quote is required
                     </div>
@@ -26,7 +26,7 @@
                         You are required to enter your name
                     </div>
                 </div>
-                <button type="submit" class="btn btn-outline-dark">Add Your Quote</button>
+                <button type="submit" class="btn btn-primary">Add Your Quote</button>
             </form>
         </blockquote>
 
