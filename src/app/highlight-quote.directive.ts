@@ -13,7 +13,7 @@ export class HighlightQuoteDirective {
   }
 
   constructor(private elem: ElementRef) {
-    this.elem.nativeElement.style.background = "rgb(255, 0, 255)";
+    this.elem.nativeElement.style.background = "rgb(51, 146, 255)";
   
   }
   private textDeco(action:string){
